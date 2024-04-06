@@ -1,5 +1,11 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "PertCalculator.h"
+
+
+
+
 
 int main(int argc, char *argv[])
 {
@@ -11,8 +17,16 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/qt/qml/pertmethod/main.qml")));
-    if (engine.rootObjects().isEmpty())
+    if (engine.rootObjects().isEmpty()) {
+
+        qWarning() << engine.catchError().toString();
+
         return -1;
+    }
+
+    PERTCalculator calculator;
+    QObject::connect(engine.rootObjects().first(), SIGNAL(calculate()), &calculator, SLOT(onCalculate()));
+
 
     return app.exec();
 }

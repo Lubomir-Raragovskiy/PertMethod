@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/qt/qml/pertmethod">
         <file>main.qml</file>
+        <file>ValueInputRow.qml</file>
+        <file>InputField.qml</file>
+        <file>CustomButton.qml</file>
     </qresource>
 </RCC>
