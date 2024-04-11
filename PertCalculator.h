@@ -12,25 +12,25 @@ class PERTCalculator : public QObject {
 
 private:
     QQmlApplicationEngine* engine;
-    float number;
-    float pessimisticEstimate;
-    float mostLikelyEstimate;
-    float minEstimate;
+    double number;
+    double pessimisticEstimate;
+    double mostLikelyEstimate;
+    double minEstimate;
 
-    float avgLaborIntesity = 0;
-    float totalSquareDeviation = 0;
+    double avgLaborIntesity = 0;
+    double totalSquareDeviation = 0;
 
 
 public:
-    Q_INVOKABLE void setValues(float number, float mostLikelyEstimate, float minEstimate, float pessimisticEstimate);
+    Q_INVOKABLE void setValues(double number, double mostLikelyEstimate, double minEstimate, double pessimisticEstimate);
 
-    Q_INVOKABLE float getAverageEstimate();
+    Q_INVOKABLE double getAverageEstimate();
 
-    Q_INVOKABLE float getAverageSquareDeviation();
+    Q_INVOKABLE double getAverageSquareDeviation();
 
-    Q_INVOKABLE float getAverageLaborIntensity();
-    Q_INVOKABLE float getTotalSquardDeviaton();
-    Q_INVOKABLE float getTotalLaborIntensity();
+    Q_INVOKABLE double getAverageLaborIntensity();
+    Q_INVOKABLE double getTotalSquardDeviaton();
+    Q_INVOKABLE double getTotalLaborIntensity();
 
     Q_INVOKABLE void clear();
 };

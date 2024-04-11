@@ -3,7 +3,7 @@
 #include <QQmlApplicationEngine>
 
 
-void PERTCalculator::setValues(float number, float mostLikelyEstimate, float minEstimate, float pessimisticEstimate)
+void PERTCalculator::setValues(double number, double mostLikelyEstimate, double minEstimate, double pessimisticEstimate)
 {
 	this->number = number;
 	this->pessimisticEstimate = pessimisticEstimate;
@@ -14,27 +14,27 @@ void PERTCalculator::setValues(float number, float mostLikelyEstimate, float min
 	totalSquareDeviation += number * pow(getAverageSquareDeviation(), 2);
 }
 
-float PERTCalculator::getAverageEstimate()
+double PERTCalculator::getAverageEstimate()
 {
 	return (pessimisticEstimate + 4 * mostLikelyEstimate + minEstimate) / 6;
 }
 
-float PERTCalculator::getAverageSquareDeviation() {
+double PERTCalculator::getAverageSquareDeviation() {
 	
 	return (pessimisticEstimate - minEstimate) / 6;
 }
 
-float PERTCalculator::getAverageLaborIntensity() {
+double PERTCalculator::getAverageLaborIntensity() {
 
 	return avgLaborIntesity;
 }
 
-float PERTCalculator::getTotalSquardDeviaton()
+double PERTCalculator::getTotalSquardDeviaton()
 {
 	return sqrt(totalSquareDeviation);
 }
 
-float PERTCalculator::getTotalLaborIntensity()
+double PERTCalculator::getTotalLaborIntensity()
 {
 	return avgLaborIntesity + 2 * sqrt(totalSquareDeviation);
 }
