@@ -1,1 +1,1 @@
-# PertMethod
+# PERT Method
