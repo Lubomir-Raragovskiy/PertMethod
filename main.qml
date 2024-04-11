@@ -79,9 +79,9 @@ Window {
                     squareDeviation.functions.text = Calculator.getAverageSquareDeviation().toFixed(2)
 
 
-                    avgLaborIntensity.text = Calculator.getAverageLaborIntensity().toFixed(2)
-                    totalSquareDeviaton.text = Calculator.getTotalSquardDeviaton().toFixed(2)
-                    totalLaborIntensity.text =Calculator.getTotalLaborIntensity().toFixed(2)
+                    avgLaborIntensity.text = Calculator.getAverageLaborIntensity().toFixed(0)
+                    totalSquareDeviaton.text = Calculator.getTotalSquardDeviaton().toFixed(0)
+                    totalLaborIntensity.text =Calculator.getTotalLaborIntensity().toFixed(0)
                     Calculator.clear()
 
                 }
