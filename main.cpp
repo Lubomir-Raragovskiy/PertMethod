@@ -16,6 +16,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    PERTCalculator calculator;
+    engine.rootContext()->setContextProperty("Calculator", &calculator);
+
     engine.load(QUrl(QStringLiteral("qrc:/qt/qml/pertmethod/main.qml")));
     if (engine.rootObjects().isEmpty()) {
 
@@ -24,8 +27,9 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    PERTCalculator calculator;
-    QObject::connect(engine.rootObjects().first(), SIGNAL(calculate()), &calculator, SLOT(onCalculate()));
+   
+
+    //QObject::connect(engine.rootObjects().first(), SIGNAL(calculate()), &calculator, SLOT(onCalculate()));
 
 
     return app.exec();

@@ -6,14 +6,33 @@ class QQmlApplicationEngine;
 
 class PERTCalculator : public QObject {
 
-    Q_OBJECT
         
+    Q_OBJECT
 
-public slots:
-
-    void onCalculate();
 
 private:
     QQmlApplicationEngine* engine;
+    float number;
+    float pessimisticEstimate;
+    float mostLikelyEstimate;
+    float minEstimate;
+
+    float avgLaborIntesity;
+    float totalSquareDeviation;
+
+
+public:
+    Q_INVOKABLE void setValues(float number, float mostLikelyEstimate, float minEstimate, float pessimisticEstimate);
+
+    Q_INVOKABLE float getAverageEstimate();
+
+    Q_INVOKABLE float getAverageSquareDeviation();
+
+    Q_INVOKABLE float getAverageLaborIntensity();
+    Q_INVOKABLE float getTotalSquardDeviaton();
+    Q_INVOKABLE float getTotalLaborIntensity();
 
 };
+
+
+

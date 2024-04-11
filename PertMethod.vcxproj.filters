@@ -31,9 +31,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ValueInputRow.qml">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="InputField.qml">
       <Filter>Source Files</Filter>
     </None>
@@ -42,16 +39,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="PertCalculator.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="PertCalculator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PertCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="PertCalculator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

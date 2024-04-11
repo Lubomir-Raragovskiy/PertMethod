@@ -97,7 +97,6 @@
     </ClCompile>
     <None Include="CustomButton.qml" />
     <None Include="InputField.qml" />
-    <None Include="ValueInputRow.qml" />
     <QtRcc Include="qml.qrc" />
     <None Include="main.qml" />
   </ItemGroup>
