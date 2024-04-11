@@ -82,6 +82,7 @@ Window {
                     avgLaborIntensity.text = Calculator.getAverageLaborIntensity().toFixed(2)
                     totalSquareDeviaton.text = Calculator.getTotalSquardDeviaton().toFixed(2)
                     totalLaborIntensity.text =Calculator.getTotalLaborIntensity().toFixed(2)
+                    Calculator.clear()
 
                 }
 

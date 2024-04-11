@@ -38,3 +38,9 @@ float PERTCalculator::getTotalLaborIntensity()
 {
 	return avgLaborIntesity + 2 * sqrt(totalSquareDeviation);
 }
+
+void PERTCalculator::clear()
+{
+	avgLaborIntesity = 0;
+	totalSquareDeviation = 0;
+}

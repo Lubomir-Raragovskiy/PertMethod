@@ -17,8 +17,8 @@ private:
     float mostLikelyEstimate;
     float minEstimate;
 
-    float avgLaborIntesity;
-    float totalSquareDeviation;
+    float avgLaborIntesity = 0;
+    float totalSquareDeviation = 0;
 
 
 public:
@@ -32,6 +32,7 @@ public:
     Q_INVOKABLE float getTotalSquardDeviaton();
     Q_INVOKABLE float getTotalLaborIntensity();
 
+    Q_INVOKABLE void clear();
 };
 
 
